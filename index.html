@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe name" />
+        <input type="text" name="city" placeholder="Cafe city" />
+        <button>Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+      const config = {
+        apiKey: "AIzaSyDJVSAJ7Kzy0KwAapFpqgHHDEm1jPY173U",
+        authDomain: "daniels-cloud-cafe.firebaseapp.com",
+        databaseURL: "https://daniels-cloud-cafe.firebaseio.com",
+        projectId: "daniels-cloud-cafe",
+        storageBucket: "daniels-cloud-cafe.appspot.com",
+        messagingSenderId: "775222166832",
+        appId: "1:775222166832:web:4b33afebe21cf9b600b4f5",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
